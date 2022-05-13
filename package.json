@@ -1,0 +1,24 @@
+{
+  "name": "carros",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.16",
+    "prisma": "^3.14.0"
+  },
+  "dependencies": {
+    "@fastify/cors": "^7.0.0",
+    "@fastify/static": "^5.0.2",
+    "@prisma/client": "^3.14.0",
+    "fastify": "^3.29.0",
+    "fastify-multer": "^2.0.2"
+  }
+}
