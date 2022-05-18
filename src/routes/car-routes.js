@@ -27,6 +27,24 @@ const routes = [
     preHandler: upload.single("image"),
     handler: PostController.createCar,
   },
+  {
+    method: "DELETE",
+    url: "/cars/:id",
+    handler: PostController.deleteCar,
+  },
+  {
+    method: "PUT",
+    url: "/cars/:id",
+    preHandler: upload.single("image"),
+    handler: PostController.putCar,
+  },
+  {
+    method: "PATCH",
+    url: "/cars/:id",
+    preHandler: upload.single("image"),
+    handler: PostController.patchCar,
+  },
+  
 ];
 
 export default (fastify, _, next) => {

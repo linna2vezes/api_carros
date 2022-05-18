@@ -27,6 +27,17 @@ const routes = [
     preHandler: upload.single("image"),
     handler: PostController.createBrand,
   },
+  {
+    method: "DELETE",
+    url: "/brands/:id",
+    handler: PostController.deleteBrand,
+  },
+  {
+    method: "PUT",
+    url: "/brands/:id",
+    handler: PostController.putBrand,
+  },
+  
 ];
 
 export default (fastify, _, next) => {

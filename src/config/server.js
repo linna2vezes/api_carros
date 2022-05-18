@@ -1,6 +1,6 @@
 import Fastify from "fastify";
-import postRoutes from "../routes/car-routes.js";
-import postRoutes1 from "../routes/brand-routes.js";
+import carRoutes from "../routes/car-routes.js";
+import brandRoutes from "../routes/brand-routes.js";
 import multer from "fastify-multer";
 import fastifyStatic from "@fastify/static";
 import path from "path";
@@ -19,9 +19,9 @@ fastify.register(fastifyStatic, {
   prefix: "/public/",
 });
 
-fastify.register(postRoutes);
+fastify.register(carRoutes);
 
-fastify.register(postRoutes1);
+fastify.register(brandRoutes);
 
 fastify.register(cors, {
   origin: (origin, callback) => {
